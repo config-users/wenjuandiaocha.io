@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>相册展示</title>
+  <link rel="icon" href="../favicon.ico" />
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="masonry">
+    <div class="divider1"></div>
+    <div class="divider2"></div>
+    <div class="divider3"></div>
+  </div>
+  <div class="enlarged" id="enlarged-container" style="display: none;">
+    <img id="enlarged-photo" src="" alt="Enlarged Photo">
+  </div>
+  <script src="../public.js"></script>
+  <script src="./script.js"></script>
+  <script>
+    function get_click() {
+      const photos = document.querySelectorAll('.card.show img');
+      const enlargedContainer = document.getElementById('enlarged-container');
+      const enlargedPhoto = document.getElementById('enlarged-photo');
+      function showEnlargedPhoto(src) {
+          enlargedPhoto.src = src;
+          enlargedContainer.style.display = 'flex';
+      }
+      function hideEnlargedPhoto() {
+          enlargedContainer.style.display = 'none';
+      }
+      photos.forEach((photo) => {
+          const img = photo.querySelector('img');
+          photo.addEventListener('click', () => {
+              showEnlargedPhoto(photo.src);
+          });
+      });
+
+      enlargedContainer.addEventListener('click', hideEnlargedPhoto);
+    }
+    setInterval(get_click,1000)
+  </script>
+  
+</body>
+<!-- 音乐 -->
+<audio src="./ty.mp3" autoplay loop id="music"></audio>
+<script>
+    window.onload = function () {
+        var audio = document.getElementById('music');
+    }
+    function play() {
+        var audio = document.getElementById('music');
+        if (audio.paused) {
+            audio.play();
+            // document.getElementById('musicImg').src = "images/play.jpg";
+        }
+    }
+</script>
+<script>
+    window.addEventListener("click", function(event) {
+        play()
+    });
+    window.addEventListener("wheel", function(event) {
+        play()
+    });
+    window.addEventListener("touchstart", function(event) {
+        play()
+    });
+</script>
+</html>

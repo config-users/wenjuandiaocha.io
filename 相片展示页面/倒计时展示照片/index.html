@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>五星限定甜妹</title>
+    <link rel="icon" href="../favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <!-- 头像 -->
+    <div class="cs">
+        <img src="./img/微信头像.jpg" id="logo"> 
+    </div>
+    <div id="photo-container">
+        <video id="photo" controls autoplay>
+            <source src="./img/video.mp4" type="video/mp4">
+        </video>
+    </div>
+    <canvas class="canvas" width="1820" height="905"></canvas>
+    <!-- 出生计时 -->
+    <p class="text">
+        来到这个世界已经 <br />
+        <span id="span_dt_dt"></span>
+    </p>
+</body>
+<!--  设定出生日期 -->
+<script type="text/javascript" src="time.js"></script>
+<!-- canvas动画 -->
+<script type="text/javascript" src="index.js"></script>
+<!-- copyright -->
+</html>

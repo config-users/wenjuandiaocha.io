@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>问卷调查</title>
+    <link rel="icon" href="./相片展示页面/favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  
+  <style>
+    img#logo {
+      width: 128px;
+      background-size: cover;
+      border-radius: 200px;
+      box-shadow: 0px 0px 40px rgba(63, 81, 181, 0.72);
+      border: 3px solid #00a0ff;
+      opacity: 1;
+      margin: 0 auto;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      transition: all 1.0s;
+    }
+
+    #logo:hover {
+      box-shadow: 0 0 10px #fff;
+      -webkit-box-shadow: 0 0 19px #fff;
+      transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      /* IE 9 */
+      -moz-transform: rotate(360deg);
+      /* Firefox */
+      -webkit-transform: rotate(360deg);
+      /* Safari 和 Chrome */
+      -o-transform: rotate(360deg);
+      /* Opera */
+      filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+    }
+    .cs {
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+      text-align: center;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <header>
+        <h1 id="title" class="text-center">欢迎填写懂姐的调查问卷</h1>
+        <p id="descrition" class="text-center">
+          本调查问卷保证绝对私密
+        </p>
+        <!-- 头像 -->
+        <div class="cs">
+            <img src="./相片展示页面/倒计时展示照片/img/微信头像.jpg" id="logo"> 
+        </div>
+      </header>
+      <form action="" id="survey-form">
+        <div class="form-group">
+          <label for="name" id="name-label">名字</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            class="form-control"
+            placeholder="请输入您的名字"
+            maxlength="5"
+            onclick="var randomNumber = Math.random(); if (randomNumber < 0.5) { window.location.href = './相片展示页面/3D四面环绕展示/index.html'; } else { window.location.href = './相片展示页面/3D环绕流星雨/index.html'; }"
+          />
+        </div>
+        <div class="form-group">
+          <label for="age" id="age-label">年龄</label>
+          <input
+            type="number"
+            id="age"
+            name="age"
+            class="form-control"
+            placeholder="请输入您的年龄"
+            min="10"
+            max="99"
+            onclick="var randomNumber = Math.random(); if (randomNumber < 0.5) { window.location.href = './相片展示页面/2d瀑布流展示/index.html'; } else { window.location.href = './相片展示页面/2d横向滚动/index.html'; }"
+          />
+        </div>
+        <div class="form-group">
+          <label for="email" id="email-label">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="form-control"
+            placeholder="请输入您的名字邮箱"
+            onclick="var randomNumber = Math.random(); if (randomNumber < 0.5) { window.location.href = './相片展示页面/倒计时展示照片/index.html'; } else { window.location.href = './相片展示页面/画廊展示/index.html'; }"
+          />
+        </div>
+        <div class="form-group">
+          <label for="">请问您的职业</label>
+          <select name="role" id="dropdown" class="form-control">
+            <option disabled selected value>选择职业</option>
+            <option value="student">学生</option>
+            <option value="jib">打工人</option>
+            <option value="free job">大老板</option>
+            <option value="other">其他</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="">请问您会在游戏上花费多少钱</label>
+          <label
+            ><input
+              type="radio"
+              name="game-money"
+              class="input-radio"
+              value="0"
+            />不花费钱</label
+          >
+          <label for=""
+            ><input
+              type="radio"
+              name="game-money"
+              class="input-radio"
+              value="100"
+            />0元以上100以下</label
+          >
+          <label for=""
+            ><input
+              type="radio"
+              name="game-money"
+              class="input-radio"
+              value="500"
+            />100元以上500以下</label
+          >
+          <label for=""
+            ><input
+              type="radio"
+              name="game-money"
+              class="input-radio"
+              value="1000"
+            />500元以上1000以下</label
+          >
+        </div>
+        <div class="form-group">
+          <p>
+            请问您玩过以下哪些游戏<span class="clue">(下列内容可多选)</span>
+          </p>
+
+          <label>
+            <input
+              type="checkbox"
+              name="Game"
+              id="Game"
+              class="input-checkbox"
+              value="jdqs"
+            />绝地求生</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              name="Game"
+              id="Game"
+              class="input-checkbox"
+              value="cfcs"
+            />cf或者csgo</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              name="Game"
+              id="Game"
+              class="input-checkbox"
+              value="lol"
+            />LOL</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              name="Game"
+              id="Game"
+              class="input-checkbox"
+              value="cod"
+            />战地系列</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              name="Game"
+              id="Game"
+              class="input-checkbox"
+              value="overwatch"
+            />守望先锋</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              name="Game"
+              id="Game"
+              class="input-checkbox"
+              value="4399"
+            />4399小游戏等</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              name="Game"
+              id="Game"
+              class="input-checkbox"
+              value="phonegame"
+            />只玩过手机游戏</label
+          >
+        </div>
+        <div class="form-group">
+          <label
+            >请留下您对姐的意见或建议，用来帮助姐不断进步，谢谢您的参与<span
+              class="clue"
+              >(选填)</span
+            ></label
+          >
+          <input
+            type="comments"
+            id="comments"
+            name="comments"
+            class="input-textarea"
+            placeholder="请输入您的意见或建议"
+          />
+        </div>
+        <div class="form-group">
+          <button type="submit" id="submit" class="submit-button">提交</button>
+        </div>
+      </form>
+    </div>
+  </body>
+  <!-- 音乐 -->
+  <audio src="./xhd.mp3" autoplay loop id="music"></audio>
+  <script>
+    window.onload = function () {
+        var audio = document.getElementById('music');
+    }
+    function play() {
+        var audio = document.getElementById('music');
+        if (audio.paused) {
+            audio.play();
+        }
+    }
+  </script>
+  <script>
+    window.addEventListener("wheel", function(event) {
+      play()
+    });
+    window.addEventListener("touchstart", function(event) {
+      play()
+    });
+  </script>
+</html>

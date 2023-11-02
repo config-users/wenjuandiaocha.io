@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>五星限定拽姐</title>
+    <link rel="icon" href="../favicon.ico" />
+    <link rel="stylesheet" href="./styles.css">
+    <script src="../public.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <ul class = 'one'>
+            <li><img src="" alt=""></li>
+            <li><img src="" alt=""></li>
+            <li><img src="" alt=""></li>
+            <li><img src="" alt=""></li>
+            <li><img src="" alt=""></li>
+            <li><img src="" alt=""></li>
+        </ul>
+        <br>
+        <ul class = 'two'>
+            <li><img src="../img/7.jpg" alt=""></li>
+            <li><img src="../img/8.jpg" alt=""></li>
+            <li><img src="../img/9.jpg" alt=""></li>
+            <li><img src="../img/10.jpg" alt=""></li>
+            <li><img src="../img/11.jpg" alt=""></li>
+            <li><img src="../img/12.jpg" alt=""></li>
+        </ul>
+        <br>
+        <ul class = 'three'>
+            <li><img src="../img/13.jpg" alt=""></li>
+            <li><img src="../img/14.jpg" alt=""></li>
+            <li><img src="../img/15.jpg" alt=""></li>
+            <li><img src="../img/16.jpg" alt=""></li>
+            <li><img src="../img/17.jpg" alt=""></li>
+            <li><img src="../img/18.jpg" alt=""></li>
+        </ul>
+    </div>
+    <img id="bg" src="./bg.png" class="bottom-center-image" alt="Bottom Center Image">
+    <script>
+        var id_num = 1
+        var id_num1 = 1
+        var id_num2 = 1
+        var img = ""
+        const randomImageNumbers = getRandomNumbers(18);
+        randomImageNumbers.forEach((number) => {
+            if (id_num<=6) {
+                img = document.querySelector("body > div > ul.one > li:nth-child("+id_num+") > img")
+            }
+            else if (id_num<=12){
+                img = document.querySelector("body > div > ul.two > li:nth-child("+id_num1+") > img")
+                id_num1++
+            }
+            else{
+                img = document.querySelector("body > div > ul.three > li:nth-child("+id_num2+") > img")
+                id_num2++
+            }
+            img.src = `../img/${number}.jpg`; // 根据文件名规则构建图片路径
+            id_num++;
+        });
+    </script>
+    <!-- 音乐 -->
+    <audio src="./syts.mp3" autoplay loop id="music"></audio>
+    <script>
+        window.onload = function () {
+            var audio = document.getElementById('music');
+        }
+        function play() {
+            var audio = document.getElementById('music');
+            if (audio.paused) {
+                audio.play();
+                // document.getElementById('musicImg').src = "images/play.jpg";
+            }
+        }
+    </script>
+    <script>
+        window.addEventListener("click", function(event) {
+            play()
+        });
+        window.addEventListener("wheel", function(event) {
+            play()
+        });
+        window.addEventListener("touchstart", function(event) {
+            play()
+        });
+    </script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
